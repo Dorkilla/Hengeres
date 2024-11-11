@@ -1,4 +1,4 @@
-package hu.szamalk;
+package hu.szamalk.modell;
 
 public class MertaniHenger {
     private static int hengerDarab=0;
@@ -42,7 +42,8 @@ public class MertaniHenger {
         return Math.pow(sugar,2)*Math.PI*magassag;
     }
     //veszélyes és nehéz használni
-    public static void setHengerDarab(int hengerDarab) {
-        MertaniHenger.hengerDarab = hengerDarab;
+    //protected - csak a leszármazott éri el, vagy aki azonos package-ben van
+    protected static void csokkentHengerDarab() {
+        MertaniHenger.hengerDarab--;
     }
 }

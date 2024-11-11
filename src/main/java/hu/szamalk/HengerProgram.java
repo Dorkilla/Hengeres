@@ -1,5 +1,9 @@
 package hu.szamalk;
 
+import hu.szamalk.modell.LyukasHenger;
+import hu.szamalk.modell.MertaniHenger;
+import hu.szamalk.modell.TomorHenger;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +15,7 @@ public class HengerProgram {
     }
 
     public void run() {
-        MertaniHenger.setHengerDarab(-5);
+        //MertaniHenger.csokkentHengerDarab();
         int db = MertaniHenger.getHengerDarab();
         System.out.printf("A felhasznált hengerek(%d db):\n", db);
         //for(MertaniHenger henger : hengerek){

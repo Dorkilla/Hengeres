@@ -1,8 +1,6 @@
-package hu.szamalk;
+package hu.szamalk.modell;
 
-import jdk.dynalink.beans.BeansLinker;
-
-public class LyukasHenger extends TomorHenger{
+public class LyukasHenger extends TomorHenger {
     private double falvastagsag;
 
     public LyukasHenger(double sugar, double magassag, double falvastagsag) {
@@ -35,7 +33,7 @@ public class LyukasHenger extends TomorHenger{
         double belsoSugar = getSugar()-falvastagsag;
         MertaniHenger belsoHenger = new MertaniHenger(belsoSugar, this.getMagassag());
         //+1 henger létrejött, ezért kell csökkenteni
-        MertaniHenger.setHengerDarab(MertaniHenger.getHengerDarab()-1);
+        MertaniHenger.csokkentHengerDarab();
         return super.terfogat() - belsoHenger.terfogat();
 
     }
