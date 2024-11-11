@@ -1,5 +1,7 @@
 package hu.szamalk;
 
+import jdk.dynalink.beans.BeansLinker;
+
 public class LyukasHenger extends TomorHenger{
     private double falvastagsag;
 
@@ -20,9 +22,22 @@ public class LyukasHenger extends TomorHenger{
         this.falvastagsag = falvastagsag;
     }
 
+
     @Override
     public double terfogat() {
-        return super.terfogat();
+        //sok változó a magyarázathoz:
+//        double kulsoTerfogat = super.terfogat();
+//        double belsoSugar = getSugar()-falvastagsag;
+//        MertaniHenger belsoHenger = new MertaniHenger(belsoSugar, this.getMagassag());
+//        double belsoTerfogat = belsoHenger.terfogat();
+//        return kulsoTerfogat - belsoTerfogat;
+
+        double belsoSugar = getSugar()-falvastagsag;
+        MertaniHenger belsoHenger = new MertaniHenger(belsoSugar, this.getMagassag());
+        //+1 henger létrejött, ezért kell csökkenteni
+        MertaniHenger.setHengerDarab(MertaniHenger.getHengerDarab()-1);
+        return super.terfogat() - belsoHenger.terfogat();
+
     }
 
     @Override

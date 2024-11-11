@@ -39,7 +39,10 @@ public class MertaniHenger {
     }
 
     public double terfogat(){
-    return 0.0;
+        return Math.pow(sugar,2)*Math.PI*magassag;
     }
-
+    //veszélyes és nehéz használni
+    public static void setHengerDarab(int hengerDarab) {
+        MertaniHenger.hengerDarab = hengerDarab;
+    }
 }

@@ -11,6 +11,7 @@ public class HengerProgram {
     }
 
     public void run() {
+        MertaniHenger.setHengerDarab(-5);
         int db = MertaniHenger.getHengerDarab();
         System.out.printf("A felhasznált hengerek(%d db):\n", db);
         //for(MertaniHenger henger : hengerek){
@@ -26,7 +27,10 @@ public class HengerProgram {
         hengerek = new ArrayList<>();
         hengerek.add(new MertaniHenger(1, 1));
         hengerek.add(new TomorHenger(1, 1));
-        hengerek.add(new LyukasHenger(1, 1, 1));
+        hengerek.add(new TomorHenger(1, 1,.5));
+        hengerek.add(new LyukasHenger(1, 1, 1,.1));
+        hengerek.add(new LyukasHenger(1, 1, 1,.5));
+        hengerek.add(new LyukasHenger(1, 1, 1,1));
     }
 
     public double atlagTerfogat() {
