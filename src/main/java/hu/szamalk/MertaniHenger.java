@@ -1,10 +1,11 @@
 package hu.szamalk;
 
 public class MertaniHenger {
-    private int hengerDarab;
+    private static int hengerDarab=0;
     private double sugar, magassag;
 
     public MertaniHenger(double sugar, double magassag) {
+        MertaniHenger.hengerDarab++;
         this.sugar = sugar;
         this.magassag = magassag;
     }
@@ -15,6 +16,10 @@ public class MertaniHenger {
 
     public double getMagassag() {
         return magassag;
+    }
+
+    public int getHengerDarab() {
+        return 0;
     }
 
     public void setSugar(double sugar) {
@@ -37,7 +42,4 @@ public class MertaniHenger {
     return 0.0;
     }
 
-    public int getHengerDarab() {
-        return hengerDarab;
-    }
 }
