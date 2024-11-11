@@ -28,7 +28,11 @@ public class HengerProgram {
         hengerek.add(new LyukasHenger(1,1,1));
     }
     public double atlagTerfogat(){
-        return 0.0;
+        double ossz=0;
+        for(MertaniHenger henger: this.lista()){
+            ossz+=henger.terfogat();
+        }
+        return ossz / MertaniHenger.getHengerDarab();
     }
     public double csovekSulya(){
         return 0.0;

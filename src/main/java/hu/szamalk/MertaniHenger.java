@@ -18,8 +18,8 @@ public class MertaniHenger {
         return magassag;
     }
 
-    public int getHengerDarab() {
-        return 0;
+    public static int getHengerDarab() {
+        return hengerDarab;
     }
 
     public void setSugar(double sugar) {
