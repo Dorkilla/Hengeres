@@ -28,11 +28,11 @@ public class MertaniHenger {
     @Override
     public String toString() {
         return "MertaniHenger{" +
-                "hengerDarab=" + hengerDarab +
-                ", sugar=" + sugar +
+                "sugar=" + sugar +
                 ", magassag=" + magassag +
                 '}';
     }
+
     public double terfogat(){
     return 0.0;
     }
