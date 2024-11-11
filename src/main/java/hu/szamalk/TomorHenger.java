@@ -22,7 +22,11 @@ public class TomorHenger extends MertaniHenger {
     }
 
     public double suly(){
-        return super.terfogat() * fajsuly;
+//        double v0=terfogat();
+//        double v1=this.terfogat();
+//        double v2=super.terfogat();
+//        double v=v1;
+        return this.terfogat() * fajsuly;
     }
 
     @Override
